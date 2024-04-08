@@ -1,0 +1,51 @@
+/* You can add global styles to this file, and also import other style files */
+
+@keyframes donut-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.donut {
+  display: inline-block;
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-left-color: #7983ff;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  animation: donut-spin 1.2s linear infinite;
+
+  &.centered {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.container { //主容器宽度
+  max-width: 2500px!important;
+}
+.confirmation { //修复提示框位置
+  position:absolute !important; 
+  margin: auto!important;
+  left:0px !important;
+  top:0px !important;
+  right:0px !important;
+  bottom:0px !important;
+}
+
+@font-face{
+  font-family: mypaddingFont;
+  font-weight: 700;
+  src: local('宋体');   //这个字体可以保持 数字和字母宽度一致
+  font-display: auto ; //字体不加载的时候,如何处理
+}
+#card-ExportString ,#card-importString { 
+  font-family: mypaddingFont;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

@@ -1,0 +1,225 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="common">
+      <UniqueIdentifier>{3d251cec-f961-4a4b-bb3f-d69c148975bf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="common\socket">
+      <UniqueIdentifier>{bf6910ad-6991-4b4c-a671-0bed97784b34}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="common\Rejection">
+      <UniqueIdentifier>{3e364c0b-3bd4-4d8d-bb05-864ba631b756}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="网络通讯相关">
+      <UniqueIdentifier>{0b211758-04df-4fcf-ba11-9006b28cf5bb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="网络通讯相关\本地网络通讯">
+      <UniqueIdentifier>{7c5de7af-3428-428b-801b-00cefe45ac16}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="common\xxtea">
+      <UniqueIdentifier>{f1980dad-41ec-496f-bc49-b71c241ff079}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="界面">
+      <UniqueIdentifier>{77743ed9-f37f-48e2-ba6b-5e8024a77ad6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="界面\客户端">
+      <UniqueIdentifier>{70f4ab56-05cf-4c01-8bb4-d1a097c72e4e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="控件">
+      <UniqueIdentifier>{48a45f86-0e13-41c8-a646-e9d15f2dd95b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="控件\CNewTabCtrl">
+      <UniqueIdentifier>{00aae6e0-a0d0-4130-8943-c56eb57283ec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="网络通讯相关\服务器网络通讯">
+      <UniqueIdentifier>{317ee732-b187-44e0-9765-b6371f5c3b01}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="common\config">
+      <UniqueIdentifier>{79f99218-1d11-45f9-9a92-30b9d8e3e400}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="common\fileHelp">
+      <UniqueIdentifier>{32c340be-402f-4ceb-a9e7-40bda4cce283}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="界面\设置">
+      <UniqueIdentifier>{0d2f922c-4f78-4e84-8f4e-e0e8c809b28b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="common\inject">
+      <UniqueIdentifier>{16a6de8e-f884-422b-9de7-1371e2f3164f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="common\CRegEdit">
+      <UniqueIdentifier>{8f80a4eb-b60a-4841-b045-dd63dd1c0dcb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="界面\登陆">
+      <UniqueIdentifier>{dbfd5577-1e44-45a5-a441-ada776f8c9ee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="common\ShareMemory">
+      <UniqueIdentifier>{154fa5b5-c52d-4c4a-8691-2f645521eb02}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ClientTest.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="framework.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="pch.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CSocket\CSocket.h">
+      <Filter>common\socket</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CRejection\CRejection.h">
+      <Filter>common\Rejection</Filter>
+    </ClInclude>
+    <ClInclude Include="xxtea.h">
+      <Filter>common\xxtea</Filter>
+    </ClInclude>
+    <ClInclude Include="times.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="msgProtocol.h">
+      <Filter>网络通讯相关\本地网络通讯</Filter>
+    </ClInclude>
+    <ClInclude Include="clientProc.h">
+      <Filter>网络通讯相关\本地网络通讯</Filter>
+    </ClInclude>
+    <ClInclude Include="msgDef.h">
+      <Filter>网络通讯相关\本地网络通讯</Filter>
+    </ClInclude>
+    <ClInclude Include="mDialogClient.h">
+      <Filter>界面\客户端</Filter>
+    </ClInclude>
+    <ClInclude Include="ClientTestDlg.h">
+      <Filter>界面</Filter>
+    </ClInclude>
+    <ClInclude Include="CNewTabCtrl.h">
+      <Filter>控件\CNewTabCtrl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CConfig\CConfig.h">
+      <Filter>common\config</Filter>
+    </ClInclude>
+    <ClInclude Include="..\fileHelp\FileHelp.h">
+      <Filter>common\fileHelp</Filter>
+    </ClInclude>
+    <ClInclude Include="appSetting.h">
+      <Filter>界面\设置</Filter>
+    </ClInclude>
+    <ClInclude Include="CSettingDlg.h">
+      <Filter>界面\设置</Filter>
+    </ClInclude>
+    <ClInclude Include="inject.h">
+      <Filter>common\inject</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CRegedit\CRegedit.h">
+      <Filter>common\CRegEdit</Filter>
+    </ClInclude>
+    <ClInclude Include="ServerApi.h">
+      <Filter>网络通讯相关\服务器网络通讯</Filter>
+    </ClInclude>
+    <ClInclude Include="DialogLogin.h">
+      <Filter>界面\登陆</Filter>
+    </ClInclude>
+    <ClInclude Include="ProcessInfoShare.h">
+      <Filter>网络通讯相关</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CShareMemory\CShareMemory.h">
+      <Filter>common\ShareMemory</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ClientTest.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="pch.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CSocket\CSocket.cpp">
+      <Filter>common\socket</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CRejection\CRejection.cpp">
+      <Filter>common\Rejection</Filter>
+    </ClCompile>
+    <ClCompile Include="xxtea.cpp">
+      <Filter>common\xxtea</Filter>
+    </ClCompile>
+    <ClCompile Include="times.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="msgProtocol.cpp">
+      <Filter>网络通讯相关\本地网络通讯</Filter>
+    </ClCompile>
+    <ClCompile Include="clientProc.cpp">
+      <Filter>网络通讯相关\本地网络通讯</Filter>
+    </ClCompile>
+    <ClCompile Include="mDialogClient.cpp">
+      <Filter>界面\客户端</Filter>
+    </ClCompile>
+    <ClCompile Include="ClientTestDlg.cpp">
+      <Filter>界面</Filter>
+    </ClCompile>
+    <ClCompile Include="CNewTabCtrl.cpp">
+      <Filter>控件\CNewTabCtrl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CConfig\CConfig.cpp">
+      <Filter>common\config</Filter>
+    </ClCompile>
+    <ClCompile Include="..\fileHelp\FileHelp.cpp">
+      <Filter>common\fileHelp</Filter>
+    </ClCompile>
+    <ClCompile Include="appSetting.cpp">
+      <Filter>界面\设置</Filter>
+    </ClCompile>
+    <ClCompile Include="CSettingDlg.cpp">
+      <Filter>界面\设置</Filter>
+    </ClCompile>
+    <ClCompile Include="inject.cpp">
+      <Filter>common\inject</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CRegedit\CRegedit.cpp">
+      <Filter>common\CRegEdit</Filter>
+    </ClCompile>
+    <ClCompile Include="DialogLogin.cpp">
+      <Filter>界面\登陆</Filter>
+    </ClCompile>
+    <ClCompile Include="ProcessInfoShare.cpp">
+      <Filter>网络通讯相关</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CShareMemory\CShareMemory.cpp">
+      <Filter>common\ShareMemory</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="ClientTest.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\ClientTest.rc2">
+      <Filter>资源文件</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\ClientTest.ico">
+      <Filter>资源文件</Filter>
+    </Image>
+  </ItemGroup>
+</Project>

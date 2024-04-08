@@ -1,0 +1,207 @@
+<div class="card">
+    <div class="card-header">
+      <div class="row">
+        <div class="col col-md-12">
+          <h5 class="card-title">
+            {{  (infoAgent.id ? infoAgent.name : '::allInfoAgent'  | abpLocalization ) + " ==> " }} {{ '::NameCollectList' | abpLocalization }}  
+          </h5>
+        </div> 
+      </div>
+    </div>
+    <div class="card-body">
+
+        <!-- 头部筛选 -->
+        <p>
+            <button type="button" class="btn btn-outline-primary" (click)="showSearch()">
+                <span>{{ "::condition" | abpLocalization }}</span>
+            </button>
+          </p> 
+            <div *ngIf="isShowSearch">
+                <div class="card">
+                  <div class="card-body">
+                    <form [formGroup]="searchForm" >
+                        <div class="form-group">
+                            <label for="infoAgent-id">{{ '::infoAgent' | abpLocalization }}</label><span> * </span>
+                            <select class="form-control" id="infoAgent-id" formControlName="infoAgentId">
+                              <option [ngValue]="null">{{'::SelectInfoAgent'  | abpLocalization }}</option>
+                              <option [ngValue]="infoAgent.id" *ngFor="let infoAgent of infoAgentList.items">
+                                {{ infoAgent.name }}
+                              </option>
+                            </select>
+                        </div> 
+                        <div class="form-group">
+                          <label for="card-filter">{{ '::filter' | abpLocalization }}</label> 
+                          <input type="text" id="card-filter" class="form-control" formControlName="filter" />
+                        </div>
+                       
+                    </form>
+                    <button type="button" class="btn btn-outline-dark" (click)="search()"> {{ '::Search' | abpLocalization }}</button>
+                  </div>
+                </div>
+            </div> 
+         
+
+
+
+          
+
+      <ngx-datatable [rows]="nameCollectList.items" [count]="nameCollectList.totalCount" [list]="list" default>
+
+        <ngx-datatable-column
+        [name]="'::Actions' | abpLocalization"
+        [maxWidth]="300"
+        [sortable]="false"
+        
+        >
+        <ng-template let-row="row" ngx-datatable-cell-template>
+            <div ngbDropdown container="body" class="d-inline-block">
+                <button
+                    class="btn btn-primary btn-sm dropdown-toggle"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    ngbDropdownToggle
+                >
+                    <i class="fa fa-cog mr-1"></i>{{ '::Actions' | abpLocalization }}
+                </button>
+                <div ngbDropdownMenu>
+                    <button ngbDropdownItem (click)="edit(row.id)">
+                    {{ '::Edit' | abpLocalization }}
+                    </button>
+                    <!-- add the Delete button -->
+                    <button ngbDropdownItem (click)="delete(row.id,row.password)">
+                        {{ '::Delete' | abpLocalization }}
+                    </button> 
+                    <button ngbDropdownItem (click)="showDetail(row.id)">
+                        {{ '::showDetail' | abpLocalization }}
+                    </button> 
+                     
+                </div>
+            </div>
+        </ng-template>
+        </ngx-datatable-column>
+         
+
+        <ngx-datatable-column [name]="'::infoAgent' | abpLocalization" prop="infoAgent"></ngx-datatable-column>
+        <ngx-datatable-column [name]="'::Name' | abpLocalization" prop="name"></ngx-datatable-column> 
+        <ngx-datatable-column [name]="'::Sex' | abpLocalization" prop="sex"></ngx-datatable-column> 
+
+
+      </ngx-datatable>
+    </div>
+  </div>
+ 
+<!-- 编辑 -->
+<abp-modal [(visible)]="isEditModalOpen" >
+    <ng-template #abpHeader>
+      <h3>{{ '::Edit' | abpLocalization }}</h3>
+    </ng-template>
+  
+    <ng-template #abpBody>
+        <form [formGroup]="form" (ngSubmit)="saveEdit()">
+            <div class="form-group">
+                <label for="card-password">{{ '::CardPassword' | abpLocalization }}</label><span> * </span>
+                <input type="text" id="card-password" class="form-control" formControlName="Password" autofocus />
+            </div>
+          <div class="form-group">
+            <label for="card-days">{{ '::Days' | abpLocalization }}</label><span> * </span>
+            <input type="text" id="card-days" class="form-control" formControlName="Days" autofocus />
+          </div>
+
+          <div class="form-group">
+            <label for="card-Status">{{ '::Status' | abpLocalization }}</label><span> * </span>
+            <select class="form-control" id="card-Status" formControlName="Status">
+              <option [ngValue]="null">{{'::SelectCardStatus'  | abpLocalization }}</option>
+              <option [ngValue]="tmpCard.value" *ngFor="let tmpCard of cardStatusExp">{{ '::'  + tmpCard.key | abpLocalization  }}</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="card-ChargingMode">{{ '::ChargingMode' | abpLocalization }}</label><span> * </span>
+            <select class="form-control" id="card-ChargingMode" formControlName="chargingMode">
+              <option [ngValue]="null" >{{'::SelectChargingMode'  | abpLocalization }}</option>
+              <option [ngValue]="tmpMode.value" *ngFor="let tmpMode of cardChargingModeExp">{{ '::'  + tmpMode.key | abpLocalization  }}</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="card-mail">{{ '::Mail' | abpLocalization }}</label> 
+            <input type="text" id="card-mail" class="form-control" formControlName="Mail" />
+          </div>
+          <div class="form-group">
+            <label for="card-Phone">{{ '::Phone' | abpLocalization }}</label> 
+            <input type="text" id="card-Phone" class="form-control" formControlName="Phone" />
+          </div>
+          <div class="form-group">
+            <label for="card-enableMail">{{ '::enableMail' | abpLocalization }}</label><span> * </span>
+            <input type="checkbox" id="card-enableMail" class="form-check" formControlName="enableMail" />
+          </div>
+          <div class="form-group">
+            <label for="card-enablePhoneMsg">{{ '::enablePhoneMsg' | abpLocalization }}</label><span> * </span>
+            <input type="checkbox" id="card-enablePhoneMsg" class="form-check" formControlName="enablePhoneMsg" />
+          </div> 
+          <div class="form-group">
+            <label>{{ '::expiredTime' | abpLocalization }}</label><span> * </span>
+            <input
+              #datepicker="ngbDatepicker"
+              class="form-control"
+              name="datepicker"
+              formControlName="expiredTime"
+              ngbDatepicker
+              (click)="datepicker.toggle()"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="branch-Remark">{{ '::Remark' | abpLocalization }}</label> 
+            <input type="text" id="branch-Remark" class="form-control" formControlName="Remark" />
+          </div>
+ 
+        </form>
+      </ng-template>
+  
+    <ng-template #abpFooter>
+      <button type="button" class="btn btn-secondary" abpClose>
+        {{ '::Close' | abpLocalization }}
+      </button>
+      <button type="button" class="btn btn-outline-dark" (click)="saveEdit()"> {{ '::Save' | abpLocalization }}</button>
+    </ng-template>
+</abp-modal>
+ 
+<!-- 查看卡密详情 --> 
+<abp-modal [(visible)]="isDetailModalOpen" >
+    <ng-template #abpHeader>
+      <h3>{{ '::showDetail' | abpLocalization }}</h3>
+    </ng-template>
+  
+    <!-- password?: string;
+    startTime?: string;
+    days: number;
+    loginOvertime?: string;
+    loginToken?: string;
+    mail?: string;
+    phone?: string;
+    branchId?: string;
+    status: CardStatus;
+    type: CardType;
+    remark?: string;
+    expiredTime?: string;
+    creatorId?: string;
+    isLogin: boolean;
+    chargingMode: CardChargingMode; 
+    enableMail: boolean;
+    enablePhoneMsg: boolean; -->
+
+    <ng-template #abpBody>
+        <div class="row" *ngFor="let key of objectKeys(selectCard)"  >
+            <div class="col col-md-12">
+                {{  '::' + key | abpLocalization  }} : {{  getFileDescription(key,selectCard[key])      }}
+            </div> 
+        </div>  
+    </ng-template>
+ 
+    <ng-template #abpFooter>
+      <button type="button" class="btn btn-secondary" abpClose>
+        {{ '::Close' | abpLocalization }}
+      </button>
+      
+    </ng-template>
+</abp-modal>

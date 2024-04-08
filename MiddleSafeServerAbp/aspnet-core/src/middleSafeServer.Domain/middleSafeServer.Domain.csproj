@@ -1,0 +1,34 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\common.props" />
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <RootNamespace>middleSafeServer</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="SK\Cards\ExtendCard.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\middleSafeServer.Domain.Shared\middleSafeServer.Domain.Shared.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Volo.Abp.DistributedLocking.Abstractions" Version="6.0.1" />
+    <PackageReference Include="Volo.Abp.Emailing" Version="6.0.1" />
+    <PackageReference Include="Volo.Abp.Identity.Domain" Version="6.0.1" />
+    <PackageReference Include="Volo.Abp.PermissionManagement.Domain.Identity" Version="6.0.1" />
+    <PackageReference Include="Volo.Abp.IdentityServer.Domain" Version="6.0.1" />
+    <PackageReference Include="Volo.Abp.PermissionManagement.Domain.IdentityServer" Version="6.0.1" />
+    <PackageReference Include="Volo.Abp.BackgroundJobs.Domain" Version="6.0.1" />
+    <PackageReference Include="Volo.Abp.AuditLogging.Domain" Version="6.0.1" />
+    <PackageReference Include="Volo.Abp.TenantManagement.Domain" Version="6.0.1" />
+    <PackageReference Include="Volo.Abp.FeatureManagement.Domain" Version="6.0.1" />
+    <PackageReference Include="Volo.Abp.SettingManagement.Domain" Version="6.0.1" />
+  </ItemGroup>
+
+
+
+</Project>

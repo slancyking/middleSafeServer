@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  middlesafeserver.httpapi.host:
+    image: ${DOCKER_REGISTRY-}middlesafeserverhttpapihost
+    build:
+      context: .
+      dockerfile: src/middleSafeServer.HttpApi.Host/Dockerfile

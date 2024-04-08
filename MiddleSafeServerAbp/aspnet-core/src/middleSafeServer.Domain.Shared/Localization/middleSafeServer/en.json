@@ -1,0 +1,10 @@
+{
+  "culture": "en",
+  "texts": {
+    "Menu:Home": "Home",
+    "Welcome": "Welcome",
+    "LongWelcomeMessage": "Welcome to the application. This is a startup project based on the ABP framework. For more information, visit abp.io.",
+    "middleSafeServer:00001": "There is already an project with the same name: {name}",
+    "middleSafeServer:00002": "There is already an branch with the same name: {name}"
+  }
+}

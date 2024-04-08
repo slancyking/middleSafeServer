@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Algorithm">
+      <UniqueIdentifier>{1349f7fd-8761-46ee-9b2b-a47e44548160}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Http">
+      <UniqueIdentifier>{917ba3d5-4089-4420-b3ca-86ebe4896c35}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SVAPI">
+      <UniqueIdentifier>{4f27d87b-3e9e-4ab1-b7a9-4e34525a3e9e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="common">
+      <UniqueIdentifier>{f511418a-25a8-44c9-a378-31ee9096efd9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="common\CShareMemory">
+      <UniqueIdentifier>{a6dfbb32-8c35-42e1-a375-670ee2dd0ce2}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="framework.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="pch.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Algorithm\Base64.h">
+      <Filter>Algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="Algorithm\CEncrypt.h">
+      <Filter>Algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="Algorithm\WebAlgorithm.h">
+      <Filter>Algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="Http\httplib.h">
+      <Filter>Http</Filter>
+    </ClInclude>
+    <ClInclude Include="SVAPI\CommonServerParam.h">
+      <Filter>SVAPI</Filter>
+    </ClInclude>
+    <ClInclude Include="SVAPI\ServerApi.h">
+      <Filter>SVAPI</Filter>
+    </ClInclude>
+    <ClInclude Include="stringHelp.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CShareMemory\CShareMemory.h">
+      <Filter>common\CShareMemory</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="middleServerSDK.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="pch.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Algorithm\Base64.cpp">
+      <Filter>Algorithm</Filter>
+    </ClCompile>
+    <ClCompile Include="Algorithm\CEncrypt.cpp">
+      <Filter>Algorithm</Filter>
+    </ClCompile>
+    <ClCompile Include="Algorithm\WebAlgorithm.cpp">
+      <Filter>Algorithm</Filter>
+    </ClCompile>
+    <ClCompile Include="SVAPI\CommonServerParam.cpp">
+      <Filter>SVAPI</Filter>
+    </ClCompile>
+    <ClCompile Include="SVAPI\ServerApi.cpp">
+      <Filter>SVAPI</Filter>
+    </ClCompile>
+    <ClCompile Include="stringHelp.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CShareMemory\CShareMemory.cpp">
+      <Filter>common\CShareMemory</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+</Project>

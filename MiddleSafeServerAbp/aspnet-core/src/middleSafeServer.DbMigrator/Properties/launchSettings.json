@@ -1,0 +1,7 @@
+{
+  "profiles": {
+    "middleSafeServer.DbMigrator": {
+      "commandName": "Project"
+    }
+  }
+}

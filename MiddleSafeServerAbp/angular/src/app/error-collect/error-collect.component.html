@@ -1,0 +1,129 @@
+<div class="card">
+    <div class="card-header">
+      <div class="row">
+        <div class="col col-md-6">
+          <h5 class="card-title">
+            {{ '::errorCollectList' | abpLocalization }}
+          </h5>
+        </div> 
+      </div>
+    </div>
+    <div class="card-body">
+
+        <!-- 头部筛选 -->
+        <p>
+            <button type="button" class="btn btn-outline-primary" (click)="showSearch()">
+                <span>{{ "::condition" | abpLocalization }}</span>
+            </button>
+          </p> 
+            <div *ngIf="isShowSearch">
+                <div class="card">
+                  <div class="card-body">
+                    <form [formGroup]="searchForm" >
+                        <div class="form-group">
+                            <label for="branch-id">{{ '::branch' | abpLocalization }}</label><span> * </span>
+                            <select class="form-control" id="branch-id" formControlName="branchId">
+                              <option [ngValue]="null">{{'::SelectBranch'  | abpLocalization }}</option>
+                              <option [ngValue]="branch.id" *ngFor="let branch of branchList.items">
+                                {{ branch.name }}
+                              </option>
+                            </select>
+                        </div>  
+                        <div class="form-group">
+                          <label for="card-errorTitle">{{ '::errorTitle' | abpLocalization }}</label> 
+                          <input type="text" id="card-errorTitle" class="form-control" formControlName="errorTitle" />
+                        </div>
+                        <div class="form-group">
+                          <label for="card-errorMessage">{{ '::errorMessage' | abpLocalization }}</label> 
+                          <input type="text" id="card-errorMessage" class="form-control" formControlName="errorMessage" />
+                        </div>
+                    </form>
+                    <button type="button" class="btn btn-outline-dark" (click)="search()"> {{ '::Search' | abpLocalization }}</button> 
+                  </div>
+                </div>
+            </div> 
+         
+
+
+
+          
+
+      <ngx-datatable [rows]="errorList.items" [count]="errorList.totalCount" [list]="list" default>
+
+        <ngx-datatable-column
+        [name]="'::Actions' | abpLocalization"
+        [maxWidth]="300"
+        [sortable]="false"
+        
+        >
+        <ng-template let-row="row" ngx-datatable-cell-template>
+            <div ngbDropdown container="body" class="d-inline-block">
+                <button
+                    class="btn btn-primary btn-sm dropdown-toggle"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    ngbDropdownToggle
+                >
+                    <i class="fa fa-cog mr-1"></i>{{ '::Actions' | abpLocalization }}
+                </button>
+                <div ngbDropdownMenu>
+                    <button ngbDropdownItem (click)="deleteSame(row.id,row.errorTitle)">
+                    {{ '::deleteSame' | abpLocalization }}
+                    </button>
+                    <!-- add the Delete button -->
+                    <button ngbDropdownItem (click)="delete(row.id,row.errorTitle)">
+                        {{ '::Delete' | abpLocalization }}
+                    </button> 
+                    <button ngbDropdownItem (click)="showDetail(row.id)">
+                        {{ '::showDetail' | abpLocalization }}
+                    </button> 
+                    
+                </div>
+            </div>
+        </ng-template>
+        </ngx-datatable-column>
+         
+
+        <ngx-datatable-column [name]="'::BranchName' | abpLocalization" prop="branchName" [width]="100"></ngx-datatable-column>
+        <ngx-datatable-column [name]="'::errorTitle' | abpLocalization" prop="errorTitle"></ngx-datatable-column> 
+        <ngx-datatable-column [name]="'::errorMessage' | abpLocalization" prop="errorMessage"  [width]="500"></ngx-datatable-column>
+        <ngx-datatable-column [name]="'::Ip' | abpLocalization" prop="ip"></ngx-datatable-column> 
+        <ngx-datatable-column [name]="'::CreationTime' | abpLocalization" prop="creationTime">
+            <ng-template let-row="row" ngx-datatable-cell-template>
+                {{ row.creationTime | date }}
+            </ng-template>
+        </ngx-datatable-column> 
+ 
+      </ngx-datatable>
+    </div>
+  </div>
+ 
+ 
+
+ 
+
+
+
+
+<!-- 查看错误详情 --> 
+<abp-modal [(visible)]="isDetailModalOpen" >
+    <ng-template #abpHeader>
+      <h3>{{ '::showDetail' | abpLocalization }}</h3>
+    </ng-template>
+   
+
+    <ng-template #abpBody>
+        <div class="row" *ngFor="let key of objectKeys(selectErrorCollect)"  >
+            <div class="col col-md-12">
+                {{  '::' + key | abpLocalization  }} : {{  getFileDescription(key,selectErrorCollect[key])      }}
+            </div> 
+        </div>  
+    </ng-template>
+ 
+    <ng-template #abpFooter>
+      <button type="button" class="btn btn-secondary" abpClose>
+        {{ '::Close' | abpLocalization }}
+      </button>
+      
+    </ng-template>
+</abp-modal>

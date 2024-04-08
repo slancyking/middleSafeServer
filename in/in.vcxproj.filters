@@ -1,0 +1,255 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="tools">
+      <UniqueIdentifier>{d84a261d-a767-44ff-89d2-1a3fc57ca0be}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="网络通讯相关">
+      <UniqueIdentifier>{b233ad05-d0b1-424e-9879-730ee6d04338}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="common">
+      <UniqueIdentifier>{e5069158-5327-4574-b54c-219c6f621cb2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="common\socket">
+      <UniqueIdentifier>{300be91c-5ad4-4fb0-bb8a-5a73d5163572}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="common\Rejection">
+      <UniqueIdentifier>{8eb3fd71-0b5c-47ad-ae89-64afe7dd3e90}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="网络通讯相关\本地网络通讯">
+      <UniqueIdentifier>{a08cbf30-9b96-446a-9824-d079a8bf865e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="网络通讯相关\服务器网络通讯">
+      <UniqueIdentifier>{0288cfda-4ed0-4ec1-aa1c-92aea9c65025}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="common\config">
+      <UniqueIdentifier>{84e52348-1c2e-4510-acd6-306e6db6d16c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="网络通讯相关\本地网络通讯\消息处理过程">
+      <UniqueIdentifier>{a1fbf109-866d-43ad-bc4e-3c0aa0ed2081}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="网络通讯相关\本地网络通讯\消息处理过程\设置方面">
+      <UniqueIdentifier>{40f08dac-a964-4972-a3fd-f40463e8eb3e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="XUnrealEngine4">
+      <UniqueIdentifier>{5b525d84-b2d6-4cf9-8375-5561a655560f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="common\CString">
+      <UniqueIdentifier>{d2b0827f-5c56-43fc-8810-44b155ee1187}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="common\base64">
+      <UniqueIdentifier>{bf6904ad-29e7-4900-9336-95c2b4e58bd0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="common\CJsonObject">
+      <UniqueIdentifier>{67f9a434-55ed-40bc-9029-0f0ad8e0b8a6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="网络通讯相关\本地网络通讯\消息处理过程\UI操作">
+      <UniqueIdentifier>{162d867c-02a3-4ef1-be77-ca25f302da85}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UE4Interface">
+      <UniqueIdentifier>{babaabdb-08bb-4410-b587-b4104d0ad8e8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UE4Interface\UI">
+      <UniqueIdentifier>{702d1399-0274-4524-af24-2dcef1b16c18}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UE4Interface\Around">
+      <UniqueIdentifier>{a8fab239-5b28-4498-a8b4-15ed6f3ebee2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UE4Interface\Input">
+      <UniqueIdentifier>{3d75dbfe-efd4-48d6-b1ef-aac092e2cfd3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UE4Interface\Move">
+      <UniqueIdentifier>{448d32b5-f78f-439e-8b37-dc1bc5123d62}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="framework.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="pch.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="eazyCrypt.h">
+      <Filter>tools</Filter>
+    </ClInclude>
+    <ClInclude Include="xxtea.h">
+      <Filter>tools</Filter>
+    </ClInclude>
+    <ClInclude Include="times.h">
+      <Filter>tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CSocket\CSocket.h">
+      <Filter>common\socket</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CRejection\CRejection.h">
+      <Filter>common\Rejection</Filter>
+    </ClInclude>
+    <ClInclude Include="socketCommon.h">
+      <Filter>网络通讯相关</Filter>
+    </ClInclude>
+    <ClInclude Include="msgProtocol.h">
+      <Filter>网络通讯相关\本地网络通讯</Filter>
+    </ClInclude>
+    <ClInclude Include="serverProc.h">
+      <Filter>网络通讯相关\本地网络通讯</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CConfig\CConfig.h">
+      <Filter>common\config</Filter>
+    </ClInclude>
+    <ClInclude Include="msgDef.h">
+      <Filter>网络通讯相关\本地网络通讯\消息处理过程</Filter>
+    </ClInclude>
+    <ClInclude Include="msgProcess.h">
+      <Filter>网络通讯相关\本地网络通讯\消息处理过程</Filter>
+    </ClInclude>
+    <ClInclude Include="msgProcessSetting.h">
+      <Filter>网络通讯相关\本地网络通讯\消息处理过程\设置方面</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CString\CString.h">
+      <Filter>common\CString</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CBase64\Base64.h">
+      <Filter>common\base64</Filter>
+    </ClInclude>
+    <ClInclude Include="ServerApi.h">
+      <Filter>网络通讯相关\服务器网络通讯</Filter>
+    </ClInclude>
+    <ClInclude Include="ProcessInfoShare.h">
+      <Filter>网络通讯相关</Filter>
+    </ClInclude>
+    <ClInclude Include="..\XUnrealEngine4\TSConfig_UE4Offset.h">
+      <Filter>XUnrealEngine4</Filter>
+    </ClInclude>
+    <ClInclude Include="..\XUnrealEngine4\TSConfig_UE4Type.h">
+      <Filter>XUnrealEngine4</Filter>
+    </ClInclude>
+    <ClInclude Include="..\XUnrealEngine4\TScript_UnrealEngine4.h">
+      <Filter>XUnrealEngine4</Filter>
+    </ClInclude>
+    <ClInclude Include="..\XUnrealEngine4\TScript_UnrealEngine4ByTYPE.h">
+      <Filter>XUnrealEngine4</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CJsonObject-master\cJSON.h">
+      <Filter>common\CJsonObject</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CJsonObject-master\CJsonObject.hpp">
+      <Filter>common\CJsonObject</Filter>
+    </ClInclude>
+    <ClInclude Include="..\XUnrealEngine4\TSConfig_UE4OffsetByUI.h">
+      <Filter>XUnrealEngine4</Filter>
+    </ClInclude>
+    <ClInclude Include="..\XUnrealEngine4\TSConfig_UE4TypeByBase.h">
+      <Filter>XUnrealEngine4</Filter>
+    </ClInclude>
+    <ClInclude Include="..\XUnrealEngine4\TSConfig_UE4TypeByUI.h">
+      <Filter>XUnrealEngine4</Filter>
+    </ClInclude>
+    <ClInclude Include="uiOption.h">
+      <Filter>网络通讯相关\本地网络通讯\消息处理过程\UI操作</Filter>
+    </ClInclude>
+    <ClInclude Include="UE4_UI.h">
+      <Filter>UE4Interface\UI</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="dllmain.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="pch.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="eazyCrypt.cpp">
+      <Filter>tools</Filter>
+    </ClCompile>
+    <ClCompile Include="xxtea.cpp">
+      <Filter>tools</Filter>
+    </ClCompile>
+    <ClCompile Include="times.cpp">
+      <Filter>tools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CSocket\CSocket.cpp">
+      <Filter>common\socket</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CRejection\CRejection.cpp">
+      <Filter>common\Rejection</Filter>
+    </ClCompile>
+    <ClCompile Include="socketCommon.cpp">
+      <Filter>网络通讯相关</Filter>
+    </ClCompile>
+    <ClCompile Include="msgProtocol.cpp">
+      <Filter>网络通讯相关\本地网络通讯</Filter>
+    </ClCompile>
+    <ClCompile Include="serverProc.cpp">
+      <Filter>网络通讯相关\本地网络通讯</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CConfig\CConfig.cpp">
+      <Filter>common\config</Filter>
+    </ClCompile>
+    <ClCompile Include="msgProcess.cpp">
+      <Filter>网络通讯相关\本地网络通讯\消息处理过程</Filter>
+    </ClCompile>
+    <ClCompile Include="msgProcessSetting.cpp">
+      <Filter>网络通讯相关\本地网络通讯\消息处理过程\设置方面</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CString\CString.cpp">
+      <Filter>common\CString</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CBase64\Base64.cpp">
+      <Filter>common\base64</Filter>
+    </ClCompile>
+    <ClCompile Include="ProcessInfoShare.cpp">
+      <Filter>网络通讯相关</Filter>
+    </ClCompile>
+    <ClCompile Include="..\XUnrealEngine4\TScript_UnrealEngine4.cpp">
+      <Filter>XUnrealEngine4</Filter>
+    </ClCompile>
+    <ClCompile Include="..\XUnrealEngine4\TScript_UnrealEngine4ByAActor.cpp">
+      <Filter>XUnrealEngine4</Filter>
+    </ClCompile>
+    <ClCompile Include="..\XUnrealEngine4\TScript_UnrealEngine4ByAHUD.cpp">
+      <Filter>XUnrealEngine4</Filter>
+    </ClCompile>
+    <ClCompile Include="..\XUnrealEngine4\TScript_UnrealEngine4ByDump.cpp">
+      <Filter>XUnrealEngine4</Filter>
+    </ClCompile>
+    <ClCompile Include="..\XUnrealEngine4\TScript_UnrealEngine4ByUE4Ctrl.cpp">
+      <Filter>XUnrealEngine4</Filter>
+    </ClCompile>
+    <ClCompile Include="..\XUnrealEngine4\TScript_UnrealEngine4ByUObject.cpp">
+      <Filter>XUnrealEngine4</Filter>
+    </ClCompile>
+    <ClCompile Include="..\XUnrealEngine4\TScript_UnrealEngine4ByUSceneComponent.cpp">
+      <Filter>XUnrealEngine4</Filter>
+    </ClCompile>
+    <ClCompile Include="..\XUnrealEngine4\TScript_UnrealEngine4By扩展功能.cpp">
+      <Filter>XUnrealEngine4</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CJsonObject-master\cJSON.c">
+      <Filter>common\CJsonObject</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CJsonObject-master\CJsonObject.cpp">
+      <Filter>common\CJsonObject</Filter>
+    </ClCompile>
+    <ClCompile Include="uiOption.cpp">
+      <Filter>网络通讯相关\本地网络通讯\消息处理过程\UI操作</Filter>
+    </ClCompile>
+    <ClCompile Include="UE4_UI.cpp">
+      <Filter>UE4Interface\UI</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+</Project>
